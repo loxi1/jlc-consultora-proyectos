@@ -1,0 +1,22 @@
+{
+  "name": "jlc-consultora-proyectos",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/prefetch": "^0.1.2",
+    "@astrojs/sitemap": "^1.1.0",
+    "@astrojs/tailwind": "^3.0.1",
+    "astro": "^2.0.17",
+    "astro-seo": "^0.7.1",
+    "mdast-util-to-string": "^3.1.1",
+    "reading-time": "^1.5.0",
+    "tailwindcss": "^3.2.7"
+  }
+}
