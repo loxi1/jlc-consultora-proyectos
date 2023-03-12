@@ -14,7 +14,7 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.jpg" } = Astro.props;
+const { title, desc, ogimage = "/opengraph.png" } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
@@ -64,3 +64,42 @@ const makeTitle = title
         </style>
     </body>
 </html>
+<style>
+	@font-face {
+		font-family: 'Archivo';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/noto.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Archivo Bold';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts/notob.woff2') format('woff2');
+	}
+  @font-face {
+		font-family: 'Letra';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/cambria.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Letra Bold';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts/cambriab.woff2') format('woff2');
+	}
+
+  html, body {
+    font-family: 'Letra';
+  }
+  h1 {
+    font-family: 'Letra bold';
+  }
+  </style>

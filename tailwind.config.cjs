@@ -29,7 +29,7 @@ module.exports = {
 					DEFAULT: '#52a567'
 				},
 				'principal-dark': '#52a567',
-				'naranja': '#f2aa3c'
+				'naranja': '#F8AF3E'
 			},
 			fontSize: {
 				sm: '0.8rem',
@@ -39,6 +39,9 @@ module.exports = {
 				'3xl': '1.953rem',
 				'4xl': '2.441rem',
 				'5xl': '3.052rem',
+			},
+			backgroundImage: {
+				'bg-proyectos': "url(/imagenes/slider/slide-bg-02.jpg)"
 			}
 		},
 		listStyleType: {

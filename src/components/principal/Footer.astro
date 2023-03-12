@@ -1,15 +1,6 @@
 ---
-import type { menuInferior } from '@utils/data';
 import Container from './Container.astro';
 import SocialNetworks from './SocialNetworks.astro';
-
-interface Link {
-    text?: string;
-	tipo?: number;
-    href?: string;
-    ariaLabel?: string;
-    icon?: string;
-}
 
 interface MenuFooter {
 	title: string;
@@ -20,9 +11,6 @@ interface Menu_Footer extends MenuFooter {
 	menusinferiores?: Array<MenuFooter>;
 }
 
-interface MenuLink extends Link {
-    links?: Array<Link>;
-}
 
 export interface Props {
 	menusinferiores?: Array<Menu_Footer>;

@@ -1,0 +1,10 @@
+---
+const { paddin } = Astro.props
+let veinte = (paddin==20) ? true: false
+let cinco = !veinte
+---
+<main
+class:list={['relative max-w-7xl m-auto bg-white sm:shadow-xl sm:rounded -mt-20 z-10 flex justify-center flex-col [&_h1]:text-lg [&_li]:text-principal-800',{'p-20': veinte},{'p-5': cinco}]}
+>
+	<slot />
+</main>

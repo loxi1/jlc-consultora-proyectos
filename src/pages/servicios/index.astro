@@ -1,12 +1,11 @@
 ---
 import Layout from "@layouts/PageLayout.astro";
 import Banner from "@components/principal/Banner.astro";
-import Articulo from "@components/servicios/Articulo.astro";
 import Contenedor from "@components/principal/Contenedor.astro";
-import { portafolio } from "@utils/data";
+import Articuloservicios from "@components/servicios/Articuloservicios.astro";
 
 const meta = {
-  title: "Proyecto",
+  title: "Servicios",
   description: "Empresa dedicada a consultoria y proyectos",
   dontUseTitleTemplate: true,
 };
@@ -14,13 +13,13 @@ const meta = {
 
 <Layout {meta}>
   <main>
-    <Banner title="Proyectos" paddin="32" img="banner/bb-energia.jpg" />
+    <Banner title="Servicios" paddin="32" img="banner/banner-energia.jpg" />
   </main>
-  <Contenedor paddin="5">
+  <Contenedor paddin="20">
     <div class="w-full mx-auto bg-white shadow-md overflow-hidden">
       <section>
-        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3">
-          <Articulo {...portafolio} />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <Articuloservicios />
         </div>
       </section>
     </div>

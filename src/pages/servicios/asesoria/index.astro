@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/PageLayout.astro";
+import Banner from "@components/principal/Banner.astro";
+import Contenedor from "@components/principal/Contenedor.astro";
+import Detalleservicio from "@components/servicios/Detalleservicio.astro";
+import { asesoria } from "@utils/data";
+
+const meta = {
+  title: "Servicios - Ascesoria",
+  description: "Empresa dedicada a consultoria y proyectos",
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <main>
+    <Banner title="Servicios / Ascesoria" paddin="32" img="banner/banner-energia.jpg" />
+  </main>
+  <Contenedor>
+    <Detalleservicio {...asesoria} />
+  </Contenedor>
+</Layout>

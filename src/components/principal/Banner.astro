@@ -1,0 +1,31 @@
+---
+const { title, img, paddin } = Astro.props
+
+let classBanner = img ?? 'banner/slide-bg-02.jpg'
+let url = `/imagenes/${img}`
+classBanner = `bg-[url(${url})]`
+let veinte = (paddin==20) ? true: false
+let treintados = !veinte
+---
+<section class="relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${url})`}}>
+    <div class="absolute inset-0 bg-gradient-to-r from-principal/75 bg-transparent to-orange"></div>
+
+        <div 
+        class:list={['relative mx-auto max-w-screen-xl lg:flex lg:96 lg:items-center',{'py-20': veinte},{'py-32': treintados}]}
+        >
+            <div class="max-w-full text-center sm:text-left">
+            <h1 class="text-3xl font-extrabold sm:text-5xl text-white letras">
+                {title}
+            </h1>				
+            </div>
+        </div>
+</section>
+
+<style>
+	.clasbanner h1.letras {
+		font-family: Mono;
+	}
+	.clasbanner strong {
+		font-family: Led;
+	}
+</style>
