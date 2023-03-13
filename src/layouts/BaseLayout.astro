@@ -1,8 +1,6 @@
 ---
 import '@assets/styles/base.css';
 
-import BasicScripts from '@components/common/BasicScripts.astro';
-
 import { checkImageUrl } from "@utils/all";
 import { SEO } from "astro-seo";
 
@@ -54,9 +52,8 @@ const makeTitle = title
         />
   </head>
 
-    <body class="antialiased text-page bg-light dark:text-slate-300 tracking-tight dark:bg-dark">
+    <body class="antialiased text-page bg-light tracking-tight">
         <slot />
-        <BasicScripts />
         <style is:global>
             img {
             content-visibility: auto;
@@ -103,3 +100,6 @@ const makeTitle = title
     font-family: 'Letra bold';
   }
   </style>
+  <script language="javascript" type="text/javascript" src="/js/typed.umd.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/vivus.js"></script>
+  

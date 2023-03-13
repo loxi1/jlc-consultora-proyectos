@@ -1,6 +1,7 @@
 ---
 import Logo from '@components/Logo.astro';
 import ToggleMenu from '@components/common/ToggleMenu.astro';
+import Numerocelular from './Numerocelular.astro';
 
 interface Link {
     text?: string;
@@ -35,10 +36,7 @@ const {
 ---
 
 <header
-  class:list={[
-    { sticky: isSticky, relative: !isSticky },
-    'top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100',
-  ]}
+  class="sticky top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 bg-white border-2 border-b-principal"
   id="header"
 >
     <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl">
@@ -50,8 +48,12 @@ const {
                 <ToggleMenu />
             </div>
         </div>
+
+        <div class="flex items-center">
+            <Numerocelular />
+        </div>
         <nav
-        class="items-center w-full md:w-auto hidden md:flex dark:text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
+        class="items-center w-full md:w-auto hidden md:flex text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
         aria-label="Main navigation"
         >
             <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
@@ -60,14 +62,14 @@ const {
                     <li class={links?.length ? 'dropdown' : ''}>
                     {links?.length ? (
                         <>
-                        <button class="font-medium hover:text-principal-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                        <button class="font-medium hover:text-principal-900 px-4 text-principal py-3 flex items-center transition duration-150 ease-in-out">
                             {text} <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" astro-icon="tabler:chevron-down"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg>
                         </button>
-                        <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                        <ul class="dropdown-menu md:backdrop-blur-md md:bg-white rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                             {links.map(({ text: text2, href: href2 }) => (
                             <li>
                                 <a
-                                class="first:rounded-t last:rounded-b md:hover:bg-principal-200 dark:hover:bg-principal-700 py-2 px-5 block whitespace-no-wrap"
+                                class="first:rounded-t last:rounded-b md:hover:bg-white text-principal hover:bg-white-100 py-2 px-5 block whitespace-no-wrap"
                                 href={href2}
                                 >
                                 {text2}
@@ -78,7 +80,7 @@ const {
                         </>
                     ) : (
                         <a
-                        class="font-medium hover:text-principal-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                        class="font-medium hover:text-principal-900 text-principal px-4 py-3 flex items-center transition duration-150 ease-in-out"
                         href={href}
                         >
                         {text}

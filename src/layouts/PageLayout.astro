@@ -3,6 +3,7 @@ import Layout from "@layouts/BaseLayout.astro";
 import Header from "@components/principal/Header.astro";
 import Footer from "@components/principal/Footer.astro";
 import { headerData, footerMenu } from "@utils/data";
+import Whatsaap from "@components/principal/Whatsaap.astro";
 
 const { meta } = Astro.props;
 ---
@@ -17,4 +18,5 @@ const { meta } = Astro.props;
     <slot name="footer">
         <Footer {...footerMenu} />
     </slot>
+    <Whatsaap />
 </Layout>

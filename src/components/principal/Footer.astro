@@ -23,14 +23,14 @@ const { links = [], menusinferiores = []} = Astro.props;
 	<Container>
 		<section class='flex flex-col justify-center lg:flex-row lg:justify-between gap-10 text-sm my-10'>
 			
-			<div class="sm:w-full basis-2/3">
+			<div class="w-full">
 				<div class="lg:flex lg:flex-row w-full">
 					<div  class="basis-1/4 sm:pb-4">
 						<a href='/'>
 							<img
 								class='mx-auto lg:ml-0 aspect-[1446/461]'
 								src='/logos/jlc-logo-buttom.svg'
-								alt='logo de Adler'
+								alt='logo de JLC'
 								loading='lazy'
 								decoding='async'
 								fetchpriority='low'
@@ -43,14 +43,12 @@ const { links = [], menusinferiores = []} = Astro.props;
 						<div class="text-justify lg:pl-10 text-xl">
 							Profesionales con más de 15 años de Experiencia, con cursos y Diplomados en Seguridad.
 						</div>
+						<div class="text-justify lg:pl-10 text-xl pt-5">
+							Fomentando la Cultura de Prevención.
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="basis-1/3">
-				<div class="w-full rounded-lg overflow-hidden flex items-end justify-start">
-					<iframe width="100%" height="100%" class="inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.486955839093!2d-77.0694329!3d-12.009960099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ceefc2913bb1%3A0xd741c5a2826f4c65!2sJir%C3%B3n%20Tom%C3%A1s%20Catari%20825%2C%20Lima%2015302!5e0!3m2!1sen!2spe!4v1678383556496!5m2!1sen!2spe" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
-				</div>
-			</div>			
+			</div>		
 		</section>
 
 		<section class="flex flex-col justify-center lg:flex-row lg:justify-between gap-10 text-sm my-10">
@@ -72,7 +70,7 @@ const { links = [], menusinferiores = []} = Astro.props;
 				class='flex flex-col lg:flex-row gap-5 md:gap-4 justify-between w-full align-middle items-center'
 			>
 
-				<div class='flex flex-wrap gap-5 justify-center lg:justify-around'>
+				<div class='flex flex-wrap gap-5 justify-center lg:justify-around text-base'>
 					Copyright © 2023 JLC consultoría y proyectos. Derechos reservados
 				</div>
 				

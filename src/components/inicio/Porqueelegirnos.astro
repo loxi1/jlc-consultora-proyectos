@@ -1,5 +1,7 @@
 ---
 import Cuadricula10x10 from "./Cuadricula10x10.astro";
+
+import Contactanos from "@components/principal/Contactanos.astro";
 ---
 
 <section class="overflow-hidden pb-12 border-y-principal-500 border-4">
@@ -12,14 +14,14 @@ import Cuadricula10x10 from "./Cuadricula10x10.astro";
                             <img
                                 src="/imagenes/cajasinicio/nosotros-somos-calificados.png"
                                 alt="Somos calificados"
-                                class="w-full rounded-2xl"
+                                class="w-full rounded-2xl hover:scale-110"
                             />
                         </div>
                         <div class="py-3 sm:py-4">
                             <img
                                 src="/imagenes/cajasinicio/consultoria.jpg"
                                 alt="Consultoría"
-                                class="w-full rounded-2xl"
+                                class="w-full rounded-2xl hover:scale-110"
                             />
                         </div>
                     </div>
@@ -28,7 +30,7 @@ import Cuadricula10x10 from "./Cuadricula10x10.astro";
                             <img
                                 src="/imagenes/cajasinicio/nosotros-lideres.png"
                                 alt="Somos lideres"
-                                class="w-full rounded-2xl"
+                                class="w-full rounded-2xl hover:scale-110"
                             />
                             <span class="absolute -right-7 -bottom-7 z-[-1]">
                                 <Cuadricula10x10 ancho="134" alto="106" />
@@ -42,8 +44,8 @@ import Cuadricula10x10 from "./Cuadricula10x10.astro";
                     <span class="text-primary mb-2 block text-lg font-semibold">
                         Por qué elegirnos
                     </span>
-                    <h2 class="text-principal mb-8 text-3xl font-bold sm:text-4xl">
-                        JCL Consultoría y Proyectos.
+                    <h2 id="element" class="text-principal mb-8 text-3xl font-bold sm:text-4xl">
+                        
                     </h2>
                     <p class="text-principal mb-8 text-base">
                         Contamos con Ingenieros Electricistas y especialistas en
@@ -54,21 +56,19 @@ import Cuadricula10x10 from "./Cuadricula10x10.astro";
                         nos basamos en el Código Nacional de Electricidad y
                         normas internacionales como IEC, ANSI, VDE, etc.
                     </p>
-                    <p class="text-principal mb-8 text-base">
-                        La supervisión de nuestras obras está dirigidos por
-                        profesionales de larga trayectoria y experiencia
-                        comprobada, garantizando el fiel cumplimiento de lo
-                        estipulado en los planos y normas eléctricas vigentes.
-                    </p>
                     <p class="text-principal mb-8 text-base">Fomentando la Cultura de Prevención</p>
-                    <a
-                        href="/contactanos"
-                        class="bg-principal inline-flex items-center justify-center rounded-lg py-4 px-10 text-center text-base font-normal text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
-                    >
-                        Contactanos
-                    </a>
+                    <div class="mt-5">
+                        <Contactanos />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    var typed = new Typed('#element', {
+        strings: ['!', 'JLC Consultoría y Proyectos.'],
+        typeSpeed: 60,
+    });
+</script>
