@@ -1,20 +1,15 @@
 ---
-import Layout from "@layouts/PageLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Banner from "@components/principal/Banner.astro";
 import Articulo from "@components/servicios/Articulo.astro";
 import Contenedor from "@components/principal/Contenedor.astro";
 import { portafolio } from "@utils/data";
 
-const meta = {
-  title: "Proyecto",
-  description: "Empresa dedicada a consultoria y proyectos",
-  dontUseTitleTemplate: true,
-};
 ---
 
-<Layout {meta}>
+<Layout title="Proyectos" desc="Nuestro proyectos eléctricos realizados.">
   <main>
-    <Banner title="Proyectos" paddin="32" img="banner/bb-energia.jpg" />
+    <Banner title="Proyectos" paddin="32" img="banner/proyectos-de-energia.jpg" />
   </main>
   <Contenedor paddin="5">
     <div class="w-full mx-auto bg-white shadow-md overflow-hidden">

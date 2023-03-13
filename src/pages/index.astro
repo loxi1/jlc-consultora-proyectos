@@ -1,47 +1,21 @@
 ---
-import Layout from "@layouts/PageLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Porqueelegirnos from "@components/inicio/Porqueelegirnos.astro";
 import Nuestroservicio from "@components/inicio/Nuestroservicio.astro";
 import Proteccionyseguridad from "@components/inicio/Proteccionyseguridad.astro";
 
-const meta = {
-  title: "Inicio",
-  description: "Empresa dedicada a consultoria y proyectos",
-  dontUseTitleTemplate: true,
-};
 ---
 
-<Layout {meta}>
-
+<Layout title="Servicios" desc="Servicios de TRÁMTES ELÉCTRICOS ENEL/LUZ DEL SUR, ASESORIA DEFENSA CIVIL y ADICIONALES">
   <!-- ====== Porque elegirnos -->
   <Porqueelegirnos />
   <!-- ====== Fin Porque elegirnos-->
 
-  
   <!-- ====== Nuestros Servicios -->
   <Nuestroservicio />
   <!-- ====== Servicios FIN -->
-
 
   <!-- ====== Proteccion y seguridad Inicio -->
   <Proteccionyseguridad />
   <!-- ====== Proteccion y seguridad FIN -->
 </Layout>
-<style>
-  .object-cover {
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .object-center {
-    -o-object-position: center;
-    object-position: center;
-  }
-  .object-fill {
-    -o-object-fit: fill;
-    object-fit: fill;
-  }
-  .h-80 {
-    height: 20rem;
-  }
-</style>

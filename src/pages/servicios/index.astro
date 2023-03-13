@@ -1,17 +1,11 @@
 ---
-import Layout from "@layouts/PageLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Banner from "@components/principal/Banner.astro";
 import Contenedor from "@components/principal/Contenedor.astro";
 import Articuloservicios from "@components/servicios/Articuloservicios.astro";
-
-const meta = {
-  title: "Servicios",
-  description: "Empresa dedicada a consultoria y proyectos",
-  dontUseTitleTemplate: true,
-};
 ---
 
-<Layout {meta}>
+<Layout title="Servicio tramítes" desc="Agiliza tus tramítes de suministro eléctrico: enel y luz del sur">
   <main>
     <Banner title="Servicios" paddin="32" img="banner/banner-energia.jpg" />
   </main>

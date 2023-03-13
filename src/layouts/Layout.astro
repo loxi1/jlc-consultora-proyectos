@@ -1,24 +1,28 @@
 ---
+import Header from "@components/principal/Header.astro";
+import Footer from "@components/principal/Footer.astro";
+import { headerData, footerMenu } from "@utils/data";
+import Whatsaap from "@components/principal/Whatsaap.astro";
+
 import '@assets/styles/base.css';
 
 import { checkImageUrl } from "@utils/all";
 import { SEO } from "astro-seo";
 
-export interface Props {
-	title: string;
-	desc?: string;
-  	ogimage?: string;
-}
+import BasicScripts from '@components/common/BasicScripts.astro';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.png" } = Astro.props;
+const { title, desc } = Astro.props;
+
+const ogimage = "/opengraph.png"
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
-  ? title + " | " + "JLC"
-  : "JLC — Consultora de proyectos electricos";
+  ? "JLC" + " | " + title
+  : "JLC | Consultora de proyectos electricos";
+
 ---
 
 <!DOCTYPE html>
@@ -30,19 +34,13 @@ const makeTitle = title
         <meta name="generator" content={Astro.generator} />
         <SEO
         title={makeTitle}
-        description={desc ||
-            "JLC es una empresa de consultoria y proyectos"}
+        description={desc}
         canonical={canonicalURL}
-        twitter={{
-            creator: "@surjithctly",
-            site: "@web3templates",
-            card: "summary_large_image",
-        }}
         openGraph={{
             basic: {
             url: canonicalURL,
             type: "website",
-            title: `JLC - Empresa de consultoria y proyectos electricos`,
+            title: `JLC - Consultoría y proyectos eléctricos`,
             image: resolvedOGImage,
             },
             image: {
@@ -53,7 +51,10 @@ const makeTitle = title
   </head>
 
     <body class="antialiased text-page bg-light tracking-tight">
+        <Header {...headerData} isSticky showRssFeed showToggleTheme />
         <slot />
+        <Footer {...footerMenu} />
+        <Whatsaap />
         <style is:global>
             img {
             content-visibility: auto;
@@ -100,6 +101,5 @@ const makeTitle = title
     font-family: 'Letra bold';
   }
   </style>
-  <script language="javascript" type="text/javascript" src="/js/typed.umd.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/typed.min.js"></script>
   <script language="javascript" type="text/javascript" src="/js/vivus.js"></script>
-  

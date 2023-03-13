@@ -1,6 +1,6 @@
 ---
 import Logo from '@components/Logo.astro';
-import ToggleMenu from '@components/common/ToggleMenu.astro';
+import MenuIcon from './icons/Menu.astro';
 import Numerocelular from './Numerocelular.astro';
 
 interface Link {
@@ -45,7 +45,13 @@ const {
                 <Logo />
             </a>
             <div class="flex items-center md:hidden">
-                <ToggleMenu />
+                <input type="checkbox" id="menu" hidden class="peer" />
+                <label
+                    for="menu"
+                    class="relative z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0"
+                >
+                    <MenuIcon />
+                </label>
             </div>
         </div>
 
@@ -53,9 +59,11 @@ const {
             <Numerocelular />
         </div>
         <nav
+        id="navbar"
         class="items-center w-full md:w-auto hidden md:flex text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
         aria-label="Main navigation"
         >
+            
             <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
                 {
                 links.map(({ text, href, links }) => (
@@ -93,3 +101,39 @@ const {
         </nav>
     </div>
 </header>
+<script type="module">
+    const menuCheckbox = document.getElementById("menu");
+    const mediaQuery = window.matchMedia("(min-width: 640px)"); // Breakpoint sm
+    const $navbar = document.querySelector("#navbar");
+  
+    $navbar.querySelectorAll("a").forEach((anchor) => {
+      anchor.addEventListener("click", (_event) => {
+        if (document.body.style.overflowY === "hidden") {
+          hideOverFlow(false);
+        }
+      });
+    });
+  
+    /** @param {boolean} value */
+    function hideOverFlow(value) {
+      if (value) {
+        window.scrollTo(0, 0);
+        document.body.style.overflowY = "hidden";
+        $navbar.classList.remove("hidden");
+      } else {
+        document.body.style.overflowY = "auto";
+        $navbar.classList.add("hidden");
+      }
+    }
+  
+    menuCheckbox.addEventListener("change", (e) =>
+      e.target.checked ? hideOverFlow(true) : hideOverFlow(false)
+    );
+  
+    mediaQuery.addEventListener("change", (e) => {
+      if (e.matches) {
+        hideOverFlow(false);
+        menuCheckbox.checked = false;
+      }
+    });
+  </script>
