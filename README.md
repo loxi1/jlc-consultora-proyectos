@@ -19,7 +19,7 @@ Dentro de su proyecto Astro, verá las siguientes carpetas y archivos:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── Logo.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
