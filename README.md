@@ -1,23 +1,17 @@
-# JCL Kit: Basics
+# JCL Consultoría y proyectos
 
 ```
 npm create astro@latest
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+> 🧑‍🚀 **JCL Consultoría y proyectos
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/2625404/224529969-92e8aa24-2738-4f83-8c69-011c54e2b1f8.png)
+![basics](https://user-images.githubusercontent.com/2625404/224769023-c40ddfda-7024-45b1-8e07-69db02f03088.png)
 
 
+## 🚀 Estructura del proyecto
 
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Dentro de su proyecto Astro, verá las siguientes carpetas y archivos:
 
 ```
 /
@@ -33,25 +27,23 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en su nombre de archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+`src/components/` no tiene nada de especial, pero ahí es donde nos gusta poner cualquier componente Astro/React/Vue/Svelte/Preact.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Cualquier activo estático, como imágenes, se puede colocar en el directorio `public/`.
 
-## 🧞 Commands
+## 🧞 Commandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
 | Command                | Action                                           |
 | :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm install`          | Instalar dependencias                            |
+| `npm run dev`          | Inicial el proyecto local  `localhost:3000`      |
+| `npm run build`        | Cree su sitio de producción en `./dist/`         |
+| `npm run preview`      | Vistra previa antes de compilar a producción     |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+| `npm run astro --help` | Obten ayuda para Astro CLI                       |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 👀 Disfruta del aplicativo
