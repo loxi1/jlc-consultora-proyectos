@@ -4,12 +4,8 @@ import Footer from "@components/principal/Footer.astro";
 import { headerData, footerMenu } from "@utils/data";
 import Whatsaap from "@components/principal/Whatsaap.astro";
 
-import '@assets/styles/base.css';
-
 import { checkImageUrl } from "@utils/all";
 import { SEO } from "astro-seo";
-
-import BasicScripts from '@components/common/BasicScripts.astro';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
@@ -21,7 +17,7 @@ const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
   ? "JLC" + " | " + title
-  : "JLC | Consultora de proyectos electricos";
+  : "JLC | Consultora de proyectos eléctricos";
 
 ---
 
@@ -58,6 +54,9 @@ const makeTitle = title
         <style is:global>
             img {
             content-visibility: auto;
+            }
+            .dropdown:hover .dropdown-menu {
+              display: block;
             }
         </style>
     </body>

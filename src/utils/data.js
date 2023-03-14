@@ -13,7 +13,7 @@ export const headerData = {
             text: 'Servicios',
             links: [
                 {
-                    text: 'Tramítes electrícos ENEL/LUZ DEL SUR',
+                    text: 'Trámites eléctricos ENEL/LUZ DEL SUR',
                     href: '/servicios/tramites',
                 },
                 {
@@ -27,7 +27,7 @@ export const headerData = {
             ],
         },
         {
-            text: 'Contactanos',
+            text: 'Contáctanos',
             href: '/contactanos',
         },
     ]
@@ -38,7 +38,7 @@ export const footerMenu = {
         {title: 'Inicio', href: '/' },
         {title: 'Proyectos', href: '/proyectos' },
         {title: 'Servicios', href: '/servicios' },
-        {title: 'Contactanos', href: '/contactanos' },
+        {title: 'Contáctanos', href: '/contactanos' },
     ]
 }
 
@@ -72,18 +72,18 @@ export const asesoria = {
             description: 'EXPEDIENTE INDECI',
             frases: 'Profesionales con más de 15 años de Experiencia, con cursos y diplomados en Seguridad.',
             items: [
-                {item: 'Plano de Ubicacion de Local'},
-                {item: 'Plano de Distribucion Arquitectonica (Actualizado)'},
-                {item: 'Plano de senalizacion (Seguridad)'},
-                {item: 'Plano de evacuacion (Seguridad)'},
-                {item: 'Planos de Tableros Electricos con sus respectivos diagramas Unifilares y Cuadros de Carga'},
+                {item: 'Plano de Ubicación de Local'},
+                {item: 'Plano de Distribución Arquitectónica (Actualizado)'},
+                {item: 'Plano de señalización (Seguridad)'},
+                {item: 'Plano de evacuación (Seguridad)'},
+                {item: 'Planos de Tableros Eléctricos con sus respectivos diagramas Unifilares y Cuadros de Carga'},
                 {item: 'Certificado de Operatividad de Detectores de Humo'},
                 {item: 'Certificado de Operatividad de Luces de Emergencia'},
                 {item: 'Certificado de Operatividad de Central de Alarma CI'},
-                {item: 'Protocolo de Sistema de Proteccion a Tierra'},
+                {item: 'Protocolo de Sistema de Protección a Tierra'},
                 {item: 'Certificado de Operatividad de Equipos'},
-                {item: 'Memoria de Instalaciones Electricas'},
-                {item: 'Calculo de Aforo'},
+                {item: 'Memoria de Instalaciones Eléctricas'},
+                {item: 'Cálculo de Aforo'},
                 {item: 'Memoria Descriptiva de Arquitectura'},
                 {item: 'Plan de Seguridad'},
             ]
@@ -106,7 +106,7 @@ export const tramites = {
                 {item: 'Planos de Instalaciones Eléctricas'},
                 {item: 'Croquis de Ubicación del predio'},
                 {item: 'Detalles de Instalación de Suministro'},
-                {item: 'Calculo de Cargas'},
+                {item: 'Cálculo de Cargas'},
                 {item: 'Diagramas Unifilares'}
             ]
         }
@@ -121,9 +121,10 @@ export const adicionales = {
             description: '',
             frases: '',
             items: [
-                {item: 'Cálculos de Luminotécnia, desarrollo de proyectos de Iluminación, empleando el DIALux y las normas vigentes para los diversos ambientes tanto en Luxes como en calidad por tipo de tarea visual o actividad.'},
-                {item: 'Diseño y Replanteo de Instalaciones Eléctricas (existentes), realizamos el ordenamiento de los circuitos segun el Codigo Nacional de Electricidad (CNE).'},
-                {item: 'Diseño de Esquema de Tableros, para mandar a fabricar, según normativa vigente.'}
+                {item: 'Cálculos de Luminotecnia, desarrollo de proyectos de Iluminación, empleando el DIALux y las normas vigentes para los diversos ambientes tanto en Luxes como en calidad por tipo de tarea visual o actividad.'},
+                {item: 'Diseño y Replanteo de Instalaciones Eléctricas (existentes), realizamos el ordenamiento de los circuitos según el Código Nacional de Electricidad (CNE).'},
+                {item: 'Diseño de Esquema de Tableros, para mandar a fabricar, según normativa vigente.'},
+                {item: 'Mantenimiento de subestaciones eléctricas'}
             ]
         }
     ]

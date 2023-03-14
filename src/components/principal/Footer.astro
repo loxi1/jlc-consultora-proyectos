@@ -17,6 +17,8 @@ export interface Props {
 }
 
 const { links = [], menusinferiores = []} = Astro.props;
+
+let anio = new Date().getFullYear();
 ---
 
 <footer class='page-footer text-white w-full p-12 bg-gradient-to-b from-principal-300 via-principal-700 to-principal relative overflow-hidden [&>div]:relative [&>div]:z-10'>
@@ -71,7 +73,7 @@ const { links = [], menusinferiores = []} = Astro.props;
 			>
 
 				<div class='flex flex-wrap gap-5 justify-center lg:justify-around text-base'>
-					Copyright © 2023 JLC consultoría y proyectos. Derechos reservados
+					Copyright © {anio} JLC consultoría y proyectos. Derechos reservados
 				</div>
 				
 				<SocialNetworks theme='dark' />
