@@ -27,23 +27,29 @@ const makeTitle = title
     <meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <SEO
-        title={makeTitle}
-        description={desc}
-        canonical={canonicalURL}
-        openGraph={{
-            basic: {
-            url: canonicalURL,
-            type: "website",
-            title: `JLC - Consultoría y proyectos eléctricos`,
-            image: resolvedOGImage,
-            },
-            image: {
-            alt: "JLC Imagen",
-            },
-        }}
-        />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+    title={makeTitle}
+    description={desc}
+    canonical={canonicalURL}
+    openGraph={{
+        basic: {
+        url: canonicalURL,
+        type: "website",
+        title: `JLC - Consultoría y proyectos eléctricos`,
+        image: resolvedOGImage,
+        },
+        image: {
+        alt: "JLC Imagen",
+        },
+    }}
+    />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('ceDUejKXJcw-1_zk7')
+    </script>
   </head>
 
     <body class="antialiased text-page bg-light tracking-tight">

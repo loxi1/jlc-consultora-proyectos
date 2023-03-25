@@ -12,9 +12,11 @@ import { remarkReadingTime } from "./src/utils/all";
 // https://astro.build/config
 import prefetch from "@astrojs/prefetch";
 
+const website = 'https://jlcelectricistas.com/'
+
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:3000",
+  site: website,
   integrations: [
     tailwind(), 
     sitemap( {lasdmod: new Date()} ), 
